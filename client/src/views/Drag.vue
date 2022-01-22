@@ -70,8 +70,8 @@ export default {
 
         element.style.position = "absolute"
 
-        var x = window.innerWidth / 2;
-        var y = window.innerHeight / 2;
+        var x = (window.innerWidth / 2) - 100;
+        var y = (window.innerHeight / 2) - 100;
 
         element.style.left = x + "px"
         element.style.top = y + "px"
