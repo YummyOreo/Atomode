@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+
+  .draggable {
+    list-style: none;
+
+    border-radius: 40px;
+    
+    background: #101214;
+    box-shadow:  6px 6px 12px #0e0f11,
+                -6px -6px 12px #121517;
+   
+
+    color: #62bbc1;
+
+    width: 200px;
+    height: 200px;
+    text-align: center;
+
+    padding: 10px;
+  }
+
+  .draggable:hover {
+    cursor: pointer;
+
+    background: #121416;
+    box-shadow:  6px 6px 12px #0f1113,
+             -6px -6px 12px #151719;
+
+  }

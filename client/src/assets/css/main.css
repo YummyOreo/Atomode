@@ -1,0 +1,23 @@
+* {
+	font-size: 20px;
+}
+
+body::-webkit-scrollbar {
+	width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+	background: #212529;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: #010400;
+}
+
+* {
+	color: #FFFBFC;
+}
+
+body {
+	background: #212529;
+}

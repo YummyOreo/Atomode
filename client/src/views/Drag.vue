@@ -1,76 +1,49 @@
 <template >
-  <div @mousemove="mouseMoved">
-    <ul>
-		<a href="#">home</a>
-    <p
-    	@click="add"
-    >
-      +
-    </p>
-      <li
-        v-for="(item, index) in itemList"
-        :id="index"
-        @mousedown="drag(index)"
-        @mousemove="draging(index)"
-        @mouseup="drop(index)"
-      >
-      {{item}}
-      </li>
-    </ul>
-  </div>
+
+  <navbar/>
+  <main>
+    <div class="content-center select-none">
+    
+      <div class="addButton">
+        <button @click="add">
+          <div class="svg-wrapper-1 ">
+            <div class="svg-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
+              </svg>
+            </div>
+          </div>
+          <span>Add</span>
+        </button>
+      </div>
+
+      <dragcanvas/>
+    </div>
+  
+  </main>
+  
     
 </template>
 
 <script>
 
 export default {
-  name: 'Home',
-  data: () => {
-    return {
-      itemList: [],
-      pickedUp: false,
-      pickedUpId: null,
-    };
+  name: 'Drag',
+  components: {
+      'navbar': require('@/components/Navbar.vue').default,
+      'dragcanvas': require('@/components/drag/drag.vue').default,
   },
   methods: {
-    drag(index) {
-      let element = document.getElementById(index)
-      element.style.position = "absolute"
-
-      this.pickedUp = true
-      this.pickedUpId = index
-    },
-    draging(index) {
-      if (this.pickedUp == false) return
-      if (this.pickedUpId != index) return
-      let element = document.getElementById(index)
-      element.style.left = event.clientX - 100 + "px";
-      element.style.top = event.clientY - 100 + "px";
-    },
-    drop(index) {
-      this.pickedUpId = null
-      this.pickedUp = false
-    },
-    mouseMoved() {
-      if (this.pickedUp == true) {
-        let element = document.getElementById(this.pickedUpId)
-          if (event.clientX - 100 + "px" != element.style.left) {
-            console.log("yay");
-
-            this.pickedUpId = null
-            this.pickedUp = false
-          }
-      }
-    },
     add() {
-      this.itemList.push("this " + (this.itemList.length + 1))
+      this.$store.dispatch("addItem")
 
       setTimeout(() => { 
-        let element = document.getElementById(this.itemList.length - 1)
+        let element = document.getElementById(this.$store.state.itemList.length - 1)
 
         element.style.position = "absolute"
 
-        var x = (window.innerWidth / 2) - 100;
+        var x = (window.innerWidth / 2) - 50;
         var y = (window.innerHeight / 2) - 100;
 
         element.style.left = x + "px"
@@ -78,43 +51,29 @@ export default {
 
       }, 0.1);
     },
-  }
+  },
 }
 </script>
 
 <style>
+  @import url("../assets/css/drag/addButton.css");
+  @import url("../assets/css/navbar/navbar.css");
 
   * {
     padding: 0;
     margin: 0;
   }
 
-  li {
-    list-style: none;
-
-    border-radius: 40px;
-    
-    background: #010400;
-    box-shadow:  6px 6px 12px #010300,
-                -6px -6px 12px #010500;
-   
-
-    color: #62bbc1;
-
-    width: 200px;
-    height: 200px;
-    text-align: center;
-
-    padding: 10px;
+  .addButton {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
   }
 
-  li:hover {
-    cursor: pointer;
-
-    background: #212529;
-    box-shadow:  6px 6px 12px #1c1f23,
-             -6px -6px 12px #262b2f;
-
-  }
 
 </style>
