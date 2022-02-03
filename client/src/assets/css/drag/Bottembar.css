@@ -1,0 +1,24 @@
+.bottembar {
+	width: 100%;
+	bottom: 0;
+	height: 5rem;
+	position: fixed;
+	background: #17191C;
+	transition: 200ms ease;
+}
+
+.bottembar-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 100%;
+	float: right;
+}
+
+.bottembar-element {
+	width: 100%;
+	padding-right: 1rem;
+}

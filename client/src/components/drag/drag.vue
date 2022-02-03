@@ -1,5 +1,5 @@
 <template>
-  <div @mousemove="mouseMoved">
+  <div>
 
     <ul>
       <li
@@ -9,6 +9,7 @@
         @mousedown="drag(index)"
         @mousemove="draging(index)"
         @mouseup="drop(index)"
+        @mouseout="drop(index)"
       >
       {{item}}
       </li>
@@ -37,17 +38,6 @@ export default {
     drop(index) {
       this.$store.commit("setPickedUp", false)
       this.$store.commit("setPickedUpId", null)
-    },
-    mouseMoved() {
-      if (this.$store.state.pickedUppickedUp == true) {
-        let element = document.getElementById(this.$store.state.pickedUpId)
-          if (event.clientX - 100 + "px" != element.style.left) {
-            console.log("yay");
-
-            this.$store.commit("setPickedUp", false)
-            this.$store.commit("setPickedUpId", null)
-          }
-      }
     },
   }
 }

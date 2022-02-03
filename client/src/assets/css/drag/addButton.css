@@ -1,8 +1,8 @@
   /* From cssbuttons.io by @adamgiebl */
-  button {
+  .addButton {
     font-family: inherit;
     font-size: 20px;
-    background: #4E5153;
+    background-image: linear-gradient(to right, #4E5153, #2D2E30);
     color: white;
     padding: 0.7em 1em;
     padding-left: 0.9em;
@@ -14,31 +14,35 @@
     transition: all 0.2s;
   }
 
-  button span {
+  .addButton span {
   display: block;
   margin-left: 0.3em;
   transition: all 0.3s ease-in-out;
   }
 
-  button svg {
+  .addButton svg {
   display: block;
   transform-origin: center center;
   transition: transform 0.3s ease-in-out;
   }
 
-  button:hover .svg-wrapper {
+  .addButton:hover .svg-wrapper {
   animation: fly-1 0.6s ease-in-out infinite alternate;
   }
 
-  button:hover svg {
+  .addButton:hover svg {
   transform: translateX(1.2em) scale(1.1);
   }
 
-  button:hover span {
+  .addButton:hover span {
   transform: translateX(5em);
   }
 
-  button:active {
+  .addButton:hover {
+    background-image: linear-gradient(to right, #008B00, #003900);
+  }
+
+  .addButton:active {
   transform: scale(0.95);
   }
 

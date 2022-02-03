@@ -13,6 +13,5 @@ export default {
 </script>
 
 <style>
-  @import url("../assets/css/navbar/navbar.css");
   @import url("../assets/css/main.css");
 </style>
