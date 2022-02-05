@@ -50,6 +50,8 @@
 }
 
 .main-nav-link-text {
+	transform: translateX(-1rem);
+	left: 1rem;
 	display: none;
 	color: #909093;
 }
