@@ -2,8 +2,8 @@
   .addButton {
     font-family: inherit;
     font-size: 20px;
-    background-image: linear-gradient(to right, #4E5153, #2D2E30);
-    color: white;
+    background-image: linear-gradient(to right, #4E5153, #323435);
+    color: #F3F0F1;
     padding: 0.7em 1em;
     padding-left: 0.9em;
     display: flex;
@@ -15,9 +15,9 @@
   }
 
   .addButton span {
-  display: block;
-  margin-left: 0.3em;
-  transition: all 0.3s ease-in-out;
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
   }
 
   .addButton svg {
@@ -39,7 +39,7 @@
   }
 
   .addButton:hover {
-    background-image: linear-gradient(to right, #008B00, #003900);
+    background-image: linear-gradient(to right, #62BBC1, #3C9197);
   }
 
   .addButton:active {

@@ -42,6 +42,8 @@
 
 .main-nav-link svg {
 	min-width: 2rem;
+	max-width: 4rem;
+	max-height: 4rem;
 	margin: 0 1.5rem;
 }
 
