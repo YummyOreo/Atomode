@@ -2,7 +2,7 @@
 	<nav class="main-navbar">
 		<ul class="main-navbar-nav">
 			<li class="main-nav-item">
-				<a href="/#/drag" class="main-nav-link">
+				<a href="/#/board" class="main-nav-link">
 
 					<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
 					width="338.000000pt" viewBox="0 0 338.000000 338.000000"

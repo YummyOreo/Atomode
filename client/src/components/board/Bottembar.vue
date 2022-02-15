@@ -43,10 +43,11 @@
 export default {
 	methods: {
     add() {
-      this.$store.dispatch("addItem")
+      this.$store.dispatch("board/togglePopupName")
+      this.$store.dispatch("board/addItem")
 
       setTimeout(() => { 
-        let element = document.getElementById(this.$store.state.itemList.length - 1)
+        let element = document.getElementById(this.$store.state.board.itemList.length - 1)
 
         element.style.position = "absolute"
 
@@ -63,7 +64,7 @@ export default {
 </script>
 
 <style>
-  	@import url("../../assets/css/drag/addButton.css");
-  	@import url("../../assets/css/drag/Bottembar.css");
+  	@import url("../../assets/css/board/addButton.css");
+  	@import url("../../assets/css/board/Bottembar.css");
 
 </style>

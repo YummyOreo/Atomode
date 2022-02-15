@@ -1,0 +1,28 @@
+.popup-text {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 10vh;
+
+    display: flex;
+    justify-content: center;
+}
+
+.popup-text-inner {
+    border-radius: 1rem;
+    z-index: 99;
+    background-color: #191C1F;
+    right: 100rem;
+    padding: 142px;
+    width: 20rem;
+    height: 20rem;
+
+    color: #FFFBFC;
+}
+
+.popup-text-enter {
+    padding-top: 8rem;
+}
+

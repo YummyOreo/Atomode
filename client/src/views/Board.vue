@@ -9,6 +9,9 @@
   
   </main>
 
+  <popuptext v-if="$store.state.board.popupNameToggle">
+  </popuptext>
+
   <bottembar />
 
   
@@ -21,15 +24,16 @@ export default {
   name: 'Drag',
   components: {
       'navbar': require('@/components/Navbar.vue').default,
-      'dragcanvas': require('@/components/drag/drag.vue').default,
-      'bottembar': require('@/components/drag/Bottembar.vue').default,
+      'dragcanvas': require('@/components/board/drag.vue').default,
+      'bottembar': require('@/components/board/Bottembar.vue').default,
+      'popuptext': require('@/components/board/popupText.vue').default,
   },
   methods: {
     add() {
-      this.$store.dispatch("addItem")
+      this.$store.dispatch("board/addItem")
 
       setTimeout(() => { 
-        let element = document.getElementById(this.$store.state.itemList.length - 1)
+        let element = document.getElementById(this.$store.state.board.itemList.length - 1)
 
         element.style.position = "absolute"
 
