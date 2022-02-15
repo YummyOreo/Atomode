@@ -2,12 +2,10 @@
   <div class="popup-text">
       <div class="popup-text-inner">
           <slot />
-          <form action="">
             <input class="popup-text-entry" v-model="name">
-            <button class="popup-text-enter select-none" @click="enterClick()">
+            <button class="popup-text-enter select-none" @click="enterClick">
                 Enter
             </button>
-          </form>
       </div>
   </div>
 </template>
