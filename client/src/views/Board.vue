@@ -9,11 +9,11 @@
   
   </main>
 
-  <popuptext v-if="$store.state.board.popupNameToggle">
-  </popuptext>
 
   <bottembar />
 
+  <popuptext v-if="$store.state.board.popupNameToggle">
+  </popuptext>
   
     
 </template>

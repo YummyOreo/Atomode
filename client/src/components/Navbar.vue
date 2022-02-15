@@ -1,5 +1,5 @@
 <template>
-	<nav class="main-navbar">
+	<nav class="main-navbar select-none">
 		<ul class="main-navbar-nav">
 			<li class="main-nav-item">
 				<a href="/#/board" class="main-nav-link">
