@@ -6,7 +6,7 @@ const board = {
     itemList: [],
     pickedUp: false,
     pickedUpId: null,
-    popupNameToggle: false
+    popupNameToggle: false,
   },
   mutations: {
     setPickedUp(state, value) {
@@ -20,15 +20,11 @@ const board = {
     },
     setPopupNameToggle(state, value) {
       state.popupNameToggle = value
-    }
-  }, actions: {
-    addItem({ commit, state }) {
-      let newItem = "this " + (state.itemList.length + 1)
-      commit("addItem", newItem)
     },
+  }, actions: {
     togglePopupName({ commit, state }) {
       commit("setPopupNameToggle", !state.popupNameToggle)
-    }
+    },
   }
 }
 

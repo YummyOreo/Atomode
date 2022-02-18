@@ -23,11 +23,26 @@ export default {
         if (this.name == "") {
           console.log("no message")
           return
-        } else if (this.name.length <= 3) {
-          console.log("must be over 3 chars long")
+        } else if (this.name.length <= 2) {
+          console.log("must be over 2 chars long")
           return
         }
         console.log(this.name)
+        this.$store.dispatch("board/togglePopupName")
+        this.$store.commit("board/addItem", this.name)
+
+        setTimeout(() => { 
+          let element = document.getElementById(this.$store.state.board.itemList.length - 1)
+
+          element.style.position = "absolute"
+
+          var x = (window.innerWidth / 2) - 50;
+          var y = (window.innerHeight / 2) - 100;
+
+          element.style.left = x + "px"
+          element.style.top = y + "px"
+
+        }, 0.1);
     }
   }
 }
