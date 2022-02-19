@@ -1,9 +1,9 @@
 <template>
-  <div class="popup-text">
-      <div class="popup-text-inner">
-          <slot />
-            <input class="popup-text-entry" v-model="name">
-            <button class="popup-text-enter select-none" @click="enterClick">
+  <div class="popup">
+      <div class="popup-inner">
+            <input class="popup-entry select-none" v-model="name" @keypress="keyPessCheck($event)" placeholder="Enter Name">
+            <p id="error" class="popup-error select-none"></p>
+            <button class="popup-enter select-none" @click="enterClick">
                 Enter
             </button>
       </div>
@@ -19,12 +19,27 @@ export default {
     }
   },
 	methods: {
+    keyPessCheck($event) {
+      if ($event.key === "Enter") {
+        this.addButton()
+      }
+    },
     enterClick() {
-        if (this.name == "") {
-          console.log("no message")
+        this.addButton()
+    },
+    addButton() {
+      let error = document.getElementById("error")
+      if (this.name == "") {
+          error.innerHTML = "Please provide a name"
+          setTimeout(() => { 
+            error.innerHTML = ""
+          }, 10000)
           return
         } else if (this.name.length <= 2) {
-          console.log("must be over 2 chars long")
+          error.innerHTML = "Name must be over 2 characters long"
+          setTimeout(() => { 
+            error.innerHTML = ""
+          }, 10000)
           return
         }
         console.log(this.name)
@@ -43,6 +58,8 @@ export default {
           element.style.top = y + "px"
 
         }, 0.1);
+
+        
     }
   }
 }

@@ -1,4 +1,4 @@
-.popup-text {
+.popup {
     position: fixed;
     top: 0;
     left: 0;
@@ -10,7 +10,7 @@
     justify-content: center;
 }
 
-.popup-text-inner {
+.popup-inner {
     border-radius: 1rem;
     z-index: 99;
     background-color: #191C1F;
@@ -22,7 +22,8 @@
     color: #FFFBFC;
 }
 
-.popup-text-entry {
+.popup-entry {
+    color: rgba(255, 251, 252);
     background-color: #0F1113;
     padding: 12px 20px;
     border: 2px solid #0F1113;
@@ -30,21 +31,34 @@
     width: 200%;
     transition: border 0.7s ease-in;
 
-    transform: translate(-30%, -100%);
+    transform: translate(-28%, -100%);
 }
 
-.popup-text-entry:focus {
+.popup-entry::placeholder {
+    color: rgba(255, 251, 252, 0.5);
+}
+
+.popup-error {
+    z-index: -1;
+    position: absolute;
+    color: #AF0606;
+    transform: translate(-30%, -180%);
+}
+
+.popup-entry:focus {
+    padding: 12px 20px;
     outline-width: 0;
     transition: border;
     border-bottom: 2px solid #EC058E;
 }
 
-.popup-text-enter {
+
+.popup-enter {
     transform: translate(-55%, 0%);
     margin-top: 3rem;
 }
 
-.popup-text-enter {
+.popup-enter {
     --color: #44A3AA;
     padding: 0.8em 1.7em;
     background-color: transparent;
@@ -62,7 +76,7 @@
     z-index: 1;
 }
 
-.popup-text-enter::before, .button::after {
+.popup-enter::before, .button::after {
     content: '';
     display: block;
     width: 50px;
@@ -75,22 +89,22 @@
     transition: 1s ease;
 }
 
-.popup-text-enter::before {
+.popup-enter::before {
     top: -1em;
     left: -1em;
 }
 
-.popup-text-enter::after {
+.popup-enter::after {
     left: calc(100% + 1em);
     top: calc(100% + 1em);
 }
 
-.popup-text-enter:hover::before, .button:hover::after {
+.popup-enter:hover::before, .button:hover::after {
     height: 410px;
     width: 410px;
 }
 
-.popup-text-enter:hover {
+.popup-enter:hover {
     color: rgb(10, 25, 30);
 }
 

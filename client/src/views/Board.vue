@@ -12,8 +12,7 @@
 
   <bottembar />
 
-  <popuptext v-if="$store.state.board.popupNameToggle">
-  </popuptext>
+  <popuptext v-if="$store.state.board.popupNameToggle" />
   
     
 </template>
