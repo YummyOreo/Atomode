@@ -57,6 +57,7 @@ export default {
           element.style.left = x + "px"
           element.style.top = y + "px"
 
+          element.style.transform = `scale(${this.$store.state.board.scale})`;
         }, 0.1);
 
         

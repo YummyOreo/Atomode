@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="draggable-canvas">
 
     <ul>
       <li
@@ -20,6 +20,12 @@
 <script>
 export default {
 	name: 'DragCanvas',
+  data() {
+    return {
+      cal: 100,
+      scale: 1
+    }
+  },
 	methods: {
     drag(index) {
       let element = document.getElementById(index)
@@ -32,8 +38,8 @@ export default {
       if (this.$store.state.board.pickedUp == false) return
       if (this.$store.state.board.pickedUpId != index) return
       let element = document.getElementById(index)
-      element.style.left = event.clientX - 100 + "px";
-      element.style.top = event.clientY - 100 + "px";
+      element.style.left = event.clientX - this.cal + "px"
+      element.style.top = event.clientY - this.cal + "px"
     },
     drop(index) {
       this.$store.commit("board/setPickedUp", false)
