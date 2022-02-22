@@ -1,5 +1,11 @@
 <template>
+<<<<<<< HEAD
   <ul>
+=======
+  <div>
+
+    <ul>
+>>>>>>> parent of ef29ab8 (adds zooming in and out)
       <li
         v-for="(item, index) in $store.state.board.itemList" :key="index"
         class="draggable select-none"
@@ -17,12 +23,6 @@
 <script>
 export default {
 	name: 'DragCanvas',
-  data() {
-    return {
-      cal: 100,
-      scale: 1
-    }
-  },
 	methods: {
     drag(index) {
       let element = document.getElementById(index)
@@ -35,8 +35,8 @@ export default {
       if (this.$store.state.board.pickedUp == false) return
       if (this.$store.state.board.pickedUpId != index) return
       let element = document.getElementById(index)
-      element.style.left = event.clientX - this.cal + "px"
-      element.style.top = event.clientY - this.cal + "px"
+      element.style.left = event.clientX - 100 + "px";
+      element.style.top = event.clientY - 100 + "px";
     },
     drop(index) {
       this.$store.commit("board/setPickedUp", false)

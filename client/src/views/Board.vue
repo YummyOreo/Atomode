@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template>
 
   <div>
@@ -13,6 +14,25 @@
       <popuptext v-if="$store.state.board.popupNameToggle" />
 
   </div>
+=======
+<template >
+
+
+  <navbar/>
+  <main>
+    <div class="content-center select-none">
+      <dragcanvas/>
+    </div>
+  
+  </main>
+
+
+  <bottembar />
+
+  <popuptext v-if="$store.state.board.popupNameToggle" />
+  
+    
+>>>>>>> parent of ef29ab8 (adds zooming in and out)
 </template>
 
 <script>
