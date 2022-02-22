@@ -54,10 +54,6 @@ export default {
 
           element.style.left = x + "px"
           element.style.top = y + "px"
-<<<<<<< HEAD
-=======
-
->>>>>>> parent of ef29ab8 (adds zooming in and out)
         }, 0.1);
 
         

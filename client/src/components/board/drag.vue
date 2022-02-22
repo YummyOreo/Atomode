@@ -1,11 +1,6 @@
 <template>
-<<<<<<< HEAD
   <ul>
-=======
-  <div>
 
-    <ul>
->>>>>>> parent of ef29ab8 (adds zooming in and out)
       <li
         v-for="(item, index) in $store.state.board.itemList" :key="index"
         class="draggable select-none"
