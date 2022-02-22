@@ -1,0 +1,79 @@
+[33mcommit ef29ab8b9185bce49ac245cc40821f51f7c52f10[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: YummyOreo <bobgim20@gmail.com>
+Date:   Sun Feb 20 16:37:39 2022 -0600
+
+    adds zooming in and out
+
+[33mcommit 63a990989b6f0450c151e12a3439ce448904bea5[m
+Author: YummyOreo <bobgim20@gmail.com>
+Date:   Sat Feb 19 12:13:37 2022 -0600
+
+    adds error stuff
+
+[33mcommit 04599fe3d476e233506b3f50cacaabef39fde982[m
+Author: YummyOreo <bobgim20@gmail.com>
+Date:   Fri Feb 18 07:50:05 2022 -0600
+
+    adds the full naming system, still need to add the info if you dont put a name or put a to short or long name
+
+[33mcommit 1e9592cde157df97c279a4e383cb059ebdaa257f[m
+Author: YummyOreo <bobgim20@gmail.com>
+Date:   Tue Feb 15 07:52:13 2022 -0600
+
+    fixed bug
+
+[33mcommit ee98e2008938b989036ce060b45b915d0e89f8cf[m
+Author: YummyOreo <bobgim20@gmail.com>
+Date:   Mon Feb 14 20:52:06 2022 -0600
+
+    adds the text field and a better button
+
+[33mcommit bc013000b925c9a875886f552e0dc946103647d4[m
+Author: YummyOreo <bobgim20@gmail.com>
+Date:   Mon Feb 14 18:28:31 2022 -0600
+
+    added a lot
+
+[33mcommit 7c9fa44a7320a54aa4333d08b0a3c47e7aafa55e[m
+Author: YummyOreo <bobgim20@gmail.com>
+Date:   Tue Feb 8 19:48:45 2022 -0600
+
+    updates some colors and navbar
+
+[33mcommit 20b8492a4533e9840f9160eda341500cca2ad1d7[m
+Author: YummyOreo <bobgim20@gmail.com>
+Date:   Sat Feb 5 09:15:32 2022 -0600
+
+    adds better icons by cinnamoth
+
+[33mcommit 16f5118d01821000e9c4da3848ac8734c2224801[m
+Author: YummyOreo <bobgim20@gmail.com>
+Date:   Thu Feb 3 15:09:25 2022 -0600
+
+    adds the bottem bar
+
+[33mcommit 4de92a383849699bce999121741ed590292a26bf[m
+Author: YummyOreo <bobgim20@gmail.com>
+Date:   Mon Jan 24 19:42:05 2022 -0600
+
+    makes a lot of changes
+
+[33mcommit d07245613de7c247acf90be7ccba7aabcddac5e5[m
+Author: YummyOreo <bobgim20@gmail.com>
+Date:   Fri Jan 21 22:34:58 2022 -0600
+
+    more fixes !
+
+[33mcommit 12e1443e35e3a8a6c966b9e73459825a5f2e14d0[m
+Author: YummyOreo <bobgim20@gmail.com>
+Date:   Fri Jan 21 22:33:34 2022 -0600
+
+    fixes !
+
+[33mcommit 43330dab4331e32159eabeab6bce006f7512daf4[m
+Author: YummyOreo <bobgim20@gmail.com>
+Date:   Tue Jan 18 18:42:11 2022 -0600
+
+    test
+    
+    Signed-off-by: YummyOreo <bobgim20@gmail.com>

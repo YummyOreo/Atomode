@@ -7,12 +7,8 @@ const board = {
     pickedUp: false,
     pickedUpId: null,
     popupNameToggle: false,
-    scale: 1
   },
   mutations: {
-    setScale(state, value) {
-      state.scale = value
-    },
     setPickedUp(state, value) {
       state.pickedUp = value
     },

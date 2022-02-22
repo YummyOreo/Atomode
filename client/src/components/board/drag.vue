@@ -1,7 +1,5 @@
 <template>
-  <div class="draggable-canvas">
-
-    <ul>
+  <ul>
       <li
         v-for="(item, index) in $store.state.board.itemList" :key="index"
         class="draggable select-none"
@@ -13,8 +11,7 @@
       >
       {{item}}
       </li>
-    </ul>
-  </div>
+  </ul>
 </template>
 
 <script>
@@ -51,4 +48,9 @@ export default {
 
 <style>
   @import url("../../assets/css/board/dragComponent.css");
+
+  .full {
+    width: 100%;
+    height: 100vh;
+  }
 </style>
