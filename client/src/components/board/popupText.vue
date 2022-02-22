@@ -49,11 +49,15 @@ export default {
         setTimeout(() => { 
           let element = document.getElementById(this.$store.state.board.itemList.length - 1)
 
+          element.style.position = "absolute"
+
           var x = (window.innerWidth / 2) - 50;
           var y = (window.innerHeight / 2) - 100;
 
           element.style.left = x + "px"
           element.style.top = y + "px"
+
+          element.style.transform = `scale(${this.$store.state.board.scale})`;
         }, 0.1);
 
         

@@ -1,38 +1,19 @@
-<<<<<<< HEAD
 <template>
 
-  <div>
+  <div @mousewheel="shink" class="full">
       <navbar/>
       <main>
         <div class="content-center select-none">
           <dragcanvas/>
         </div>
+      
       </main>
 
 
       <bottembar />
+
       <popuptext v-if="$store.state.board.popupNameToggle" />
-
   </div>
-=======
-<template >
-
-
-  <navbar/>
-  <main>
-    <div class="content-center select-none">
-      <dragcanvas/>
-    </div>
-  
-  </main>
-
-
-  <bottembar />
-
-  <popuptext v-if="$store.state.board.popupNameToggle" />
-  
-    
->>>>>>> parent of ef29ab8 (adds zooming in and out)
 </template>
 
 <script>
@@ -46,6 +27,25 @@ export default {
       'popuptext': require('@/components/board/popupText.vue').default,
   },
   methods: {
+    shink(event) {
+      
+      event.preventDefault();
+
+      let scale = this.$store.state.board.scale + event.deltaY * -0.001;
+
+      var arrayLength = this.$store.state.board.itemList.length;
+      for (var i = 0; i < arrayLength; i++) {
+
+          let element = document.getElementById(i)
+
+          scale = Math.min(Math.max(.125, scale), 4);
+
+          this.$store.commit("board/setScale", scale)
+
+          // Apply scale transform
+          element.style.transform = `scale(${this.$store.state.board.scale})`;
+      }
+    },
     add() {
       this.$store.dispatch("board/addItem")
 
@@ -59,6 +59,7 @@ export default {
 
         element.style.left = x + "px"
         element.style.top = y + "px"
+
       }, 0.1);
     },
   },
@@ -70,6 +71,11 @@ export default {
   * {
     padding: 0;
     margin: 0;
+  }
+
+  .full {
+    width: 100%;
+    height: 100vh;
   }
 
 </style>
