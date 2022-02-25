@@ -71,10 +71,6 @@ export default {
       title: 'Andromeda | Board',
       meta: [
         {
-          property: 'og:type',
-          content: 'website',
-        },
-        {
           property: 'og:url',
           content: 'https://andromeda-test-drag.netlify.app/#/board',
         },
