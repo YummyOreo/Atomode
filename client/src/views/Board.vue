@@ -79,16 +79,12 @@ export default {
           content: 'https://andromeda-test-drag.netlify.app/',
         },
         {
-          property: 'og:site_name',
+          property: 'og:title',
           content: 'Andromeda | Board',
         },
         {
-          property: 'description',
+          property: 'og:description',
           content: 'A draggable board, WIP',
-        },
-        {
-          property: 'og:image',
-          content: 'https://cdn.discordapp.com/attachments/901535491839639622/913175836956442664/helpbingus.png',
         },
       ],
     })
