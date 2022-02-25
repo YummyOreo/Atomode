@@ -33,12 +33,24 @@ export default {
           content: 'https://andromeda-test-drag.netlify.app/',
         },
         {
-          property: 'og:title',
+          property: 'twitter:title',
           content: 'Andromeda | Board',
         },
         {
           property: 'og:description',
           content: 'A draggable board, WIP',
+        },
+        {
+          property: 'twitter:title',
+          content: 'Andromeda | Board',
+        },
+        {
+          property: 'twitter:description',
+          content: 'A draggable board, WIP',
+        },
+        {
+          property: 'twitter:card',
+          content: 'summary_large_image',
         },
       ],
     })
