@@ -23,36 +23,6 @@ export default {
   setup() {
     useHead({
       title: 'Andromeda | Board',
-      meta: [
-        {
-          property: 'og:type',
-          content: 'website',
-        },
-        {
-          property: 'og:url',
-          content: 'https://andromeda-test-drag.netlify.app/',
-        },
-        {
-          property: 'twitter:title',
-          content: 'Andromeda | Board',
-        },
-        {
-          property: 'og:description',
-          content: 'A draggable board, WIP',
-        },
-        {
-          property: 'twitter:title',
-          content: 'Andromeda | Board',
-        },
-        {
-          property: 'twitter:description',
-          content: 'A draggable board, WIP',
-        },
-        {
-          property: 'twitter:card',
-          content: 'summary_large_image',
-        },
-      ],
     })
   },
   name: 'Drag',
