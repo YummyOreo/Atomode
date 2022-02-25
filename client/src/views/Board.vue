@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import { useHead } from '@vueuse/head'
 
 export default {
   name: 'Drag',
@@ -32,6 +33,8 @@ export default {
       event.preventDefault();
 
       let scale = this.$store.state.board.scale + event.deltaY * -0.001;
+
+      if (scale > 1) return
 
       var arrayLength = this.$store.state.board.itemList.length;
       for (var i = 0; i < arrayLength; i++) {
@@ -63,6 +66,33 @@ export default {
       }, 0.1);
     },
   },
+  setup() {
+    useHead({
+      title: 'Andromeda | Board',
+      meta: [
+        {
+          property: 'og:type',
+          content: 'website',
+        },
+        {
+          property: 'og:url',
+          content: 'https://andromeda-test-drag.netlify.app/#/board',
+        },
+        {
+          property: 'og:title',
+          content: 'Andromeda | Board',
+        },
+        {
+          property: 'og:description',
+          content: 'A draggable board, WIP',
+        },
+        {
+          property: 'og:image',
+          content: 'https://cdn.discordapp.com/attachments/901535491839639622/913175836956442664/helpbingus.png',
+        },
+      ],
+    })
+  }
 }
 </script>
 
