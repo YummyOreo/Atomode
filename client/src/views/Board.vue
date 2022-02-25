@@ -20,6 +20,29 @@
 import { useHead } from '@vueuse/head'
 
 export default {
+  setup() {
+    useHead({
+      title: 'Andromeda | Board',
+      meta: [
+        {
+          property: 'og:type',
+          content: 'website',
+        },
+        {
+          property: 'og:url',
+          content: 'https://andromeda-test-drag.netlify.app/',
+        },
+        {
+          property: 'og:title',
+          content: 'Andromeda | Board',
+        },
+        {
+          property: 'og:description',
+          content: 'A draggable board, WIP',
+        },
+      ],
+    })
+  },
   name: 'Drag',
   components: {
       'navbar': require('@/components/Navbar.vue').default,
@@ -66,29 +89,6 @@ export default {
       }, 0.1);
     },
   },
-  setup() {
-    useHead({
-      title: 'Andromeda | Board',
-      meta: [
-        {
-          property: 'og:type',
-          content: 'website',
-        },
-        {
-          property: 'og:url',
-          content: 'https://andromeda-test-drag.netlify.app/',
-        },
-        {
-          property: 'og:title',
-          content: 'Andromeda | Board',
-        },
-        {
-          property: 'og:description',
-          content: 'A draggable board, WIP',
-        },
-      ],
-    })
-  }
 }
 </script>
 
