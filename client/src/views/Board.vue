@@ -68,7 +68,6 @@ export default {
   },
   setup() {
     useHead({
-      title: 'Andromeda | Board',
       meta: [
         {
           property: 'og:type',
