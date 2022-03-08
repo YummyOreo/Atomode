@@ -2,17 +2,10 @@
 	width: 5rem;
 	height: 100vh;
 	position: fixed;
-	background: #1B1E21;
-	transition: 200ms ease;
+	background: #161618;
+	transition: 200ms all ease;
 	z-index: 9;
-}
-
-.main-navbar:hover {
-	width: 10rem;
-}
-
-.main-navbar:hover .main-nav-link-text {
-	display: block;
+	border-radius: 0px 20px 20px 0px;
 }
 
 .main-navbar-nav {
@@ -41,21 +34,22 @@
 }
 
 .main-nav-link svg {
-	min-width: 2rem;
-	max-width: 4rem;
-	max-height: 4rem;
-	margin: 0 1.5rem;
+	min-width: 80%;
 }
 
-.main-nav-link:hover {
-  animation: fly-1 0.6s ease-in-out infinite alternate;
+.main-nav-link:hover .main-nav-itemhover {
+	visibility: visible;
+ 	opacity: 1;
 }
 
-.main-nav-link-text {
-	transform: translateX(-1rem);
-	left: 1rem;
-	display: none;
-	color: #909093;
+.main-nav-itemhover {
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.5s linear;
+	max-width: 70%;
+	height: auto;
+    transform: translate(1rem, -0.2rem);
+	position:absolute
 }
 
 @keyframes fly-1 {

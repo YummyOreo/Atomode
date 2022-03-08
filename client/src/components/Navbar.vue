@@ -2,6 +2,9 @@
 	<nav class="main-navbar select-none">
 		<ul class="main-navbar-nav">
 			<li class="main-nav-item">
+				<img src="../assets/images/Galaxy.png" alt="">
+			</li>
+			<li class="main-nav-item">
 				<a href="/#/board" class="main-nav-link">
 
 					<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +12,7 @@
 					preserveAspectRatio="xMidYMid meet">
 
 					<g transform="translate(0.000000,338.000000) scale(0.100000,-0.100000)"
-						fill="#6A6A6D" stroke="none">
+						fill="#909093" stroke="none">
 					<path d="M566 2749 c-59 -17 -102 -86 -89 -141 7 -26 769 -1921 784 -1951 14
 						-25 89 -58 120 -51 49 11 69 30 245 229 135 154 182 201 190 192 6 -7 58 -91
 						114 -187 115 -197 130 -216 177 -229 47 -13 93 2 134 46 102 107 612 717 623
@@ -22,7 +25,7 @@
 						-171 -189 -4 -1 -509 1241 -597 1468 -4 10 -1 13 9 9 8 -3 367 -92 799 -198z"/>
 					</g>
 					</svg>
-					<span class="main-nav-link-text">Drag</span>
+					<img class="main-nav-itemhover" src="../assets/images/navbar/drag-hover.png" alt="">
 
 				</a>	
 			</li>
@@ -34,7 +37,7 @@
 					preserveAspectRatio="xMidYMid meet">
 
 					<g transform="translate(0.000000,338.000000) scale(0.100000,-0.100000)"
-						fill="#6A6A6D" stroke="none">
+						fill="#909093" stroke="none">
 					<path d="M952 2777 c-19 -7 -167 -139 -362 -321 -280 -262 -331 -314 -340
 						-347 -7 -25 -10 -277 -8 -731 3 -765 0 -722 65 -765 26 -17 105 -18 1388 -18
 						1319 0 1361 1 1388 19 59 40 57 11 57 786 0 594 -2 715 -14 738 -23 44 -621
@@ -52,8 +55,7 @@
 					</g>
 					</svg>
 
-					<span class="main-nav-link-text">Home</span>
-
+					<img class="main-nav-itemhover" src="../assets/images/navbar/house-hover.png" alt="" style="max-width: 80%; transform: translate(0.6rem, -0.3rem);">
 				</a>
 			</li>
 			
