@@ -4,8 +4,11 @@
             <input class="popup-entry select-none" v-model="name" @keypress="keyPessCheck($event)" placeholder="Enter Name">
             <p id="error" class="popup-error select-none"></p>
             <button class="popup-enter select-none" @click="enterClick">
-                Enter
+              <span id="popup-enter-text">Enter</span>
+              <div class="popup-enterHover select-none">
+              </div>
             </button>
+            
       </div>
   </div>
 </template>

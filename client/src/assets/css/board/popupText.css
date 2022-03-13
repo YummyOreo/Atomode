@@ -13,25 +13,30 @@
 .popup-inner {
     border-radius: 1rem;
     z-index: 99;
-    background-color: #191C1F;
+    background: #212121;
+    border: 1px solid #181818;
+    box-sizing: border-box;
+    border-radius: 20px;
     right: 100rem;
     padding: 142px;
-    width: 20rem;
-    height: 20rem;
+
+    width: 30rem;
+    height: 30rem;
 
     color: #FFFBFC;
 }
 
 .popup-entry {
     color: rgba(255, 251, 252);
-    background-color: #0F1113;
+    background: #121212;
+    border: 1px solid #0A0A0A;
+    box-sizing: border-box;
+    border-radius: 10px;
     padding: 12px 20px;
-    border: 2px solid #0F1113;
-    border-radius: 4px;
-    width: 200%;
+    width: 15rem;
     transition: border 0.7s ease-in;
 
-    transform: translate(-28%, -100%);
+    transform: translate(-40%, -200%);
 }
 
 .popup-entry::placeholder {
@@ -49,66 +54,41 @@
     padding: 12px 20px;
     outline-width: 0;
     transition: border;
-    border-bottom: 2px solid #EC058E;
 }
 
-
 .popup-enter {
-    transform: translate(-55%, 0%);
+    transform: translate(-40%, 530%);
     margin-top: 3rem;
+    width: 15rem;
+    height: 2.5rem;
+    background: #404040;
+    border-radius: 10px;
 }
 
-.popup-enter {
-    --color: #44A3AA;
-    padding: 0.8em 1.7em;
-    background-color: transparent;
-    border-radius: .3em;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: .5s;
-    font-weight: 400;
-    font-size: 17px;
-    border: 1px solid;
-    font-family: inherit;
-    text-transform: uppercase;
-    color: var(--color);
-    z-index: 1;
+.popup-enter:hover .popup-enterHover {
+    visibility: visible;
+    opacity: 1;
 }
 
-.popup-enter::before, .button::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 50px;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    border-radius: 50%;
-    z-index: -1;
-    background-color: var(--color);
-    transition: 1s ease;
+.popup-enter:hover #popup-enter-text {
+    transform: translate(7rem, 0rem);
 }
 
-.popup-enter::before {
-    top: -1em;
-    left: -1em;
+.popup-enterHover {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: translate(0.5rem, -2rem);
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    border: 4px solid #1CC171;
+    box-sizing: border-box;
+    border-radius: 10px;
 }
 
-.popup-enter::after {
-    left: calc(100% + 1em);
-    top: calc(100% + 1em);
+#popup-enter-text {
+    display: flex;
+    transition: all 0.5s ease;
+    transform: translate(6.5rem, 0.5rem);
 }
-
-.popup-enter:hover::before, .button:hover::after {
-    height: 410px;
-    width: 410px;
-}
-
-.popup-enter:hover {
-    color: rgb(10, 25, 30);
-}
-
-.button:active {
-    filter: brightness(.8);
-}
-
