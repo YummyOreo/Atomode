@@ -45,19 +45,9 @@
 .main-nav-itemhover {
 	visibility: hidden;
 	opacity: 0;
-	transition: visibility 0s, opacity 0.5s linear;
-	max-width: 70%;
+	transition: visibility 0.5s, opacity 0.5s ease;
+	max-width: 80%;
 	height: auto;
-    transform: translate(1rem, -0.2rem);
+    transform: translate(13px, -3px);
 	position:absolute
-}
-
-@keyframes fly-1 {
-	from {
-		transform: translateY(0.1em);
-	}
-
-	to {
-		transform: translateY(-0.1em);
-	}
 }
