@@ -47,7 +47,8 @@
     z-index: -1;
     position: absolute;
     color: #AF0606;
-    transform: translate(-30%, -180%);
+    left: 21rem;
+    top: 29rem;
 }
 
 .popup-entry:focus {
@@ -88,6 +89,7 @@
 }
 
 #popup-enter-text {
+    width: fit-content;
     display: flex;
     transition: all 0.5s ease;
     transform: translate(6.5rem, 0.5rem);
