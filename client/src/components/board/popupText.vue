@@ -2,11 +2,10 @@
   <div class="popup">
       <div class="popup-inner">
             <input class="popup-entry select-none" v-model="name" @keypress="keyPessCheck($event)" placeholder="Enter Name">
-            <span id="error" class="popup-error select-none">oeuoeuoeuo</span>
             <button class="popup-enter select-none" @click="enterClick">
-              <span id="popup-enter-text">Enter</span>
-              <div class="popup-enterHover select-none">
-              </div>
+                <span id="popup-enter-text">Enter</span>
+                <div div class="popup-enterHover select-none">
+                </div>
             </button>
             
       </div>
@@ -33,16 +32,10 @@ export default {
     addButton() {
       let error = document.getElementById("error")
       if (this.name == "") {
-          error.innerHTML = "Please provide a name"
-          setTimeout(() => { 
-            error.innerHTML = ""
-          }, 15000)
+          window.alert("Please provide a name");
           return
         } else if (this.name.length <= 2) {
-          error.innerHTML = "Name must be over 2 characters long"
-          setTimeout(() => { 
-            error.innerHTML = ""
-          }, 15000)
+          window.alert("Name must be over 2 characters long");
           return
         }
         console.log(this.name)
