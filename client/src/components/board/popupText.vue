@@ -2,6 +2,13 @@
   <div class="popup">
       <div class="popup-inner">
             <input class="popup-entry select-none" v-model="name" @keypress="keyPessCheck($event)" placeholder="Enter Name">
+            <div class="popup-dropdown">
+              <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="popup-dropdown-svg">
+              <path d="M2 2L12.6667 16L24 2" stroke="#FFFBFC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div id="popup-dropdown-dividor"></div>
+              <div id="popup-dropdown-colorSelected"></div>
+            </div>
             <button class="popup-enter select-none" @click="enterClick">
                 <span id="popup-enter-text">Enter</span>
                 <div div class="popup-enterHover select-none">
