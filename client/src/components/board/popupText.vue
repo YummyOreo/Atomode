@@ -1,5 +1,5 @@
 <template>
-  <div class="popup">
+  <div class="popup" @click="closePopup">
       <div class="popup-inner">
             <input class="popup-entry select-none" v-model="name" @keypress="keyPessCheck($event)" placeholder="Enter Name">
             <div class="popup-dropdown">
@@ -8,8 +8,26 @@
               </svg>
               <div id="popup-dropdown-dividor"></div>
               <div id="popup-dropdown-colorSelected"></div>
+              <ul class="popup-dropdown-menue">
+                <li style="border-bottom: 1px solid #121212;"></li>
+                <li class="popup-dropdown-menue-item">
+                  <div class="item-color item-red"></div>
+                </li>
+                <li class="popup-dropdown-menue-item">
+                  <div class="item-color item-yellow"></div>
+                </li>
+                <li class="popup-dropdown-menue-item">
+                  <div class="item-color item-blue"></div>
+                </li>
+                <li class="popup-dropdown-menue-item">
+                  <div class="item-color item-darkblue "></div>
+                </li>
+                <li class="popup-dropdown-menue-item">
+                  <div class="item-color item-purple"></div>
+                </li>
+              </ul>
             </div>
-            <button class="popup-enter select-none" @click="enterClick">
+            <button class="popup-enter select-none" @click="enterClick($event)">
                 <span id="popup-enter-text">Enter</span>
                 <div div class="popup-enterHover select-none">
                 </div>
@@ -62,8 +80,10 @@ export default {
 
           element.style.transform = `scale(${this.$store.state.board.scale})`;
         }, 0.1);
-
-        
+    },
+    closePopup($event) {
+        if ($event.target.className != "popup") return
+        this.$store.dispatch("board/togglePopupName")
     }
   }
 }
@@ -71,5 +91,6 @@ export default {
 
 <style>
   @import url("../../assets/css/board/popupText.css");
+  @import url("../../assets/css/board/colors.css");
 
 </style>

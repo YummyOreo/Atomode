@@ -58,10 +58,10 @@
 
 .popup-enter {
     width: 16vw;
-    height: 3vw;
+    height: 2.5vw;
     background: #404040;
     border-radius: 10px;
-    margin-top: 17vw;
+    margin-top: 17.5vw;
 }
 
 .popup-enter:hover .popup-enterHover {
@@ -70,7 +70,7 @@
 }
 
 .popup-enter:hover #popup-enter-text {
-    transform: translate(7vw, 0.3vw);
+    transform: translate(7vw, 0.2vw);
 }
 
 .popup-enterHover {
@@ -79,7 +79,7 @@
     transition: all 0.5s ease;
     transform: translate(0.5vw, -2vw);
     width: 16vw;
-    height: 3vw;
+    height: 2.5vw;
     border-radius: 10px;
     border: 4px solid #1CC171;
     box-sizing: border-box;
@@ -99,6 +99,7 @@
     box-sizing: border-box;
     border-radius: 10px;
     width: 16vw;
+    height: 2.5vw;
 
     display: grid;
     grid-template-columns: 10% 1vw 11.75vw;
@@ -107,8 +108,8 @@
 
 .popup-dropdown-svg {
     margin-top: 0.6vw;
-    margin-left: 0.5vw;
-    width: 150%; 
+    margin-left: 0.7vw;
+    width: 120%; 
     height: auto;
 }
 
@@ -120,4 +121,30 @@
     margin-left: -6.5%;
     background-color: #C3414B;
     border-radius: 0px 10px 10px 0px;
+}
+
+.popup-dropdown-menue {
+    position: absolute;
+    background: #161618;
+    border-top: 1px solid #121212;
+    border-left: 1px solid #121212;
+    border-right: 1px solid #121212;
+    margin-left: -0.1vw;
+    margin-top: 1.5vw;
+    width: 16.05vw;
+    height: 10.9vw;
+    z-index: -1;
+
+    display: grid;
+    grid-template-rows: 0.9vw 2vw 2vw 2vw 2vw 2vw;
+}
+
+.popup-dropdown-menue-item {
+    border-bottom: 1px solid #121212;
+}
+
+.item-color {
+    border-right: 2px solid #121212;
+    height: calc(2vw - 1px);
+    width: 15%;
 }
