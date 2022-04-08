@@ -1,14 +1,32 @@
 <template>
   <div class="popup" @click="closePopup">
       <div class="popup-inner">
-            <input class="popup-entry select-none" v-model="name" @keypress="keyPessCheck($event)" placeholder="Enter Name">
-            <div class="popup-dropdown">
-              <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="popup-dropdown-svg">
-              <path d="M2 2L12.6667 16L24 2" stroke="#FFFBFC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <input
+            	class="popup-entry select-none"
+            	v-model="name"
+            	@keypress="keyPessCheck($event)"
+            	placeholder="Enter Name"
+            >
+            <div class="popup-dropdown" @click="dropdowToggle($event)">
+              <svg
+              	width="26"
+              	height="18"
+              	viewBox="0 0 26 18"
+              	fill="none"
+              	xmlns="http://www.w3.org/2000/svg"
+              	class="popup-dropdown-svg"
+              >
+              <path
+              	d="M2 2L12.6667 16L24 2"
+              	stroke="#FFFBFC"
+              	stroke-width="3"
+              	stroke-linecap="round"
+              	stroke-linejoin="round"
+              />
               </svg>
               <div id="popup-dropdown-dividor"></div>
               <div id="popup-dropdown-colorSelected"></div>
-              <ul class="popup-dropdown-menue">
+            <ul class="popup-dropdown-menue" v-if="dropdown">
                 <li style="border-bottom: 1px solid #121212;"></li>
                 <li class="popup-dropdown-menue-item">
                   <div class="item-color item-red"></div>
@@ -42,7 +60,8 @@ export default {
   name: 'PopupText',
   data() {
     return {
-      name: ''
+      name: '',
+      dropdown: false
     }
   },
 	methods: {
@@ -84,6 +103,22 @@ export default {
     closePopup($event) {
         if ($event.target.className != "popup") return
         this.$store.dispatch("board/togglePopupName")
+    },
+    dropdowToggle($event) {
+      // checks if its within the popup toggle
+      const classNames = ["popup-dropdown-svg", "popup-dropdown"]
+      const classIds = ["popup-dropdown-dividor", "popup-dropdown-colorSelected"]
+
+      const className = $event.target.className.baseVal || $event.target.className
+      const classId = $event.target.id
+
+      const checkClassName =  classNames.some(e => e === className);
+      const checkIds =  classIds.some(e => e === classId);
+      
+      if ((checkIds || checkClassName) == false) return
+
+      // toggles it
+      this.dropdown = !this.dropdown
     }
   }
 }

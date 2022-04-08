@@ -7,9 +7,17 @@
 			<li class="main-nav-item">
 				<a href="/#/board" class="main-nav-link">
 
-					<img src="../assets/images/navbar/Dashboard-icon.png" alt="" style="max-width: 80%; transform: translate(0.5rem, 0);">
+					<img
+						src="../assets/images/navbar/Dashboard-icon.png"
+						alt=""
+						style="max-width: 80%; transform: translate(0.5rem, 0);"
+					>
 
-					<img class="main-nav-itemhover" src="../assets/images/navbar/Dashboard-icon-hover.png" alt="">
+					<img
+						class="main-nav-itemhover"
+						src="../assets/images/navbar/Dashboard-icon-hover.png"
+						alt=""
+					>
 
 				</a>	
 			</li>
@@ -39,7 +47,12 @@
 					</g>
 					</svg>
 
-					<img class="main-nav-itemhover" src="../assets/images/navbar/house-hover.png" alt="" style="max-width: 87%; transform: translate(11px, -4px);">
+					<img
+						class="main-nav-itemhover"
+						src="../assets/images/navbar/house-hover.png"
+						alt=""
+						style="max-width: 87%; transform: translate(11px, -4px);"
+					>
 				</a>
 			</li>
 			

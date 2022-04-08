@@ -3,8 +3,16 @@
 		<ul class="bottembar-list">
 			<li class="bottembar-element">
 				<button @click="add" class="bottembar-addButton content-center">
-					<img class="bottembar-addButton-image" src="../../assets/images/bottemBar/Add-button.png" alt="">
-					<img class="bottembar-addButton-imageHover" src="../../assets/images/bottemBar/Add-button-hover.png" alt="">
+					<img
+						class="bottembar-addButton-image"
+						src="../../assets/images/bottemBar/Add-button.png"
+						alt=""
+					>
+					<img
+						class="bottembar-addButton-imageHover"
+						src="../../assets/images/bottemBar/Add-button-hover.png"
+						alt=""
+					>
 				</button>
 			</li>
 
