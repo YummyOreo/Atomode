@@ -61,6 +61,7 @@ export default {
   data() {
     return {
       name: '',
+      type: '#1',
       dropdown: false
     }
   },
@@ -71,9 +72,9 @@ export default {
       }
     },
     enterClick() {
-        this.addButton()
+        this.addNode()
     },
-    addButton() {
+    addNode() {
       let error = document.getElementById("error")
       if (this.name == "") {
           window.alert("Please provide a name");
@@ -84,7 +85,7 @@ export default {
         }
         console.log(this.name)
         this.$store.dispatch("board/togglePopupName")
-        this.$store.commit("board/addItem", this.name)
+        this.$store.commit("board/addItem", this.name, this.type)
 
         setTimeout(() => { 
           let element = document.getElementById(this.$store.state.board.itemList.length - 1)
@@ -98,6 +99,8 @@ export default {
           element.style.top = y + "px"
 
           element.style.transform = `scale(${this.$store.state.board.scale})`;
+
+          element.classList.add(this.typeToColorClass(this.type));
         }, 0.1);
     },
     closePopup($event) {
@@ -119,6 +122,9 @@ export default {
 
       // toggles it
       this.dropdown = !this.dropdown
+    },
+    typeToColorClass(type) {
+      return "item-red"
     }
   }
 }

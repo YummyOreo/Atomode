@@ -6,10 +6,9 @@
   .draggable {
     list-style: none;
 
-    border-radius: 26px;
-    background: #101214;
-    box-shadow:  9px 9px 17px #0f1112,
-                -9px -9px 17px #111316;
+    border: 1px solid #212121;
+    box-sizing: border-box;
+    border-radius: 15px;
    
 
     width: 200px;
@@ -22,9 +21,8 @@
   .draggable:hover {
     cursor: pointer;
 
-    border-radius: 26px;
-    background: #121416;
-    box-shadow:  9px 9px 17px #0f1113,
-             -9px -9px 17px #151719;
+    border: 1px solid #3F3F3F;
+    box-sizing: border-box;
+    border-radius: 15px;
 
   }

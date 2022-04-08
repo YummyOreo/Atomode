@@ -16,8 +16,8 @@ const board = {
     setPickedUp(state, value) {
       state.pickedUp = value
     },
-    addItem(state, item) {
-      state.itemList.push(item)
+    addItem(state, name, type) {
+      state.itemList.push({"name": name, "type": type})
     },
     setPickedUpId(state, id) {
       state.pickedUpId = id

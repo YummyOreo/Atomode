@@ -11,7 +11,7 @@
         @mouseup="drop(index)"
         @mouseout="drop(index)"
       >
-      {{item}}
+      {{item.name}}
       </li>
     </ul>
   </div>
@@ -51,4 +51,5 @@ export default {
 
 <style>
   @import url("../../assets/css/board/dragComponent.css");
+
 </style>
