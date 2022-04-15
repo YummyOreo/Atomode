@@ -16,8 +16,8 @@ const board = {
     setPickedUp(state, value) {
       state.pickedUp = value
     },
-    addItem(state, name, type) {
-      state.itemList.push({"name": name, "type": type})
+    addItem(state, item) {
+      state.itemList.push(item)
     },
     setPickedUpId(state, id) {
       state.pickedUpId = id
@@ -25,10 +25,13 @@ const board = {
     setPopupNameToggle(state, value) {
       state.popupNameToggle = value
     },
+    deleteItem(state, id) {
+      state.itemList = state.itemList.splice(id,id);
+    },
   }, actions: {
     togglePopupName({ commit, state }) {
       commit("setPopupNameToggle", !state.popupNameToggle)
-    },
+    }
   }
 }
 

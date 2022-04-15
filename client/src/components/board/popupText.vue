@@ -28,19 +28,19 @@
               <div id="popup-dropdown-colorSelected"></div>
             <ul class="popup-dropdown-menue" v-if="dropdown">
                 <li style="border-bottom: 1px solid #121212;"></li>
-                <li class="popup-dropdown-menue-item">
+                <li class="popup-dropdown-menue-item" @click="selectColor('red')">
                   <div class="item-color item-red"></div>
                 </li>
-                <li class="popup-dropdown-menue-item">
+                <li class="popup-dropdown-menue-item" @click="selectColor('yellow')">
                   <div class="item-color item-yellow"></div>
                 </li>
-                <li class="popup-dropdown-menue-item">
+                <li class="popup-dropdown-menue-item" @click="selectColor('blue')">
                   <div class="item-color item-blue"></div>
                 </li>
-                <li class="popup-dropdown-menue-item">
+                <li class="popup-dropdown-menue-item" @click="selectColor('darkblue')">
                   <div class="item-color item-darkblue "></div>
                 </li>
-                <li class="popup-dropdown-menue-item">
+                <li class="popup-dropdown-menue-item" @click="selectColor('purple')">
                   <div class="item-color item-purple"></div>
                 </li>
               </ul>
@@ -61,7 +61,7 @@ export default {
   data() {
     return {
       name: '',
-      type: '#1',
+      type: 'none',
       dropdown: false
     }
   },
@@ -77,31 +77,34 @@ export default {
     addNode() {
       let error = document.getElementById("error")
       if (this.name == "") {
-          window.alert("Please provide a name");
-          return
-        } else if (this.name.length <= 2) {
-          window.alert("Name must be over 2 characters long");
-          return
-        }
-        console.log(this.name)
-        this.$store.dispatch("board/togglePopupName")
-        this.$store.commit("board/addItem", this.name, this.type)
+        window.alert("Please provide a name");
+        return
+      } else if (this.name.length <= 2) {
+        window.alert("Name must be over 2 characters long");
+        return
+      } else if (this.type === "none") {
+        window.alert("Please select a type");
+        return
+      }
+      console.log(this.name)
+      this.$store.dispatch("board/togglePopupName")
+      this.$store.commit("board/addItem", {"name": this.name, "type": this.type})
 
-        setTimeout(() => { 
-          let element = document.getElementById(this.$store.state.board.itemList.length - 1)
+      setTimeout(() => { 
+        let element = document.getElementById(this.$store.state.board.itemList.length - 1)
 
-          element.style.position = "absolute"
+        element.style.position = "absolute"
 
-          var x = (window.innerWidth / 2) - 50;
-          var y = (window.innerHeight / 2) - 100;
+        var x = (window.innerWidth / 2) - 50;
+        var y = (window.innerHeight / 2) - 100;
 
-          element.style.left = x + "px"
-          element.style.top = y + "px"
+        element.style.left = x + "px"
+        element.style.top = y + "px"
 
-          element.style.transform = `scale(${this.$store.state.board.scale})`;
+        element.style.transform = `scale(${this.$store.state.board.scale})`;
 
-          element.classList.add(this.typeToColorClass(this.type));
-        }, 0.1);
+        element.classList.add(this.typeToColorClass(this.type));
+      }, 0.1);
     },
     closePopup($event) {
         if ($event.target.className != "popup") return
@@ -122,9 +125,43 @@ export default {
 
       // toggles it
       this.dropdown = !this.dropdown
+      
+      let svgElement = document.getElementsByClassName("popup-dropdown-svg")
+
+      if (!this.dropdown) {
+        svgElement[0].style.transform =  'rotate(0deg)';
+        return;
+      }
+      svgElement[0].style.transform = 'rotate(180deg)';
     },
     typeToColorClass(type) {
-      return "item-red"
+      return "item-" + type;
+    },
+    typeToColor(type) {
+      if (type == "red") return "#C3414B"
+      if (type == "yellow") return "#EC9B82"
+      if (type == "blue") return "#49A7EF"
+      if (type == "darkblue") return "#3F4A86"
+      if (type == "purple") return "#947CA4"
+      console.log("Error \n No type provided")
+      return "#C3414B"
+    },
+    selectColor(type) {
+      this.type = type;
+
+      let element = document.getElementById("popup-dropdown-colorSelected")
+      console.log(element)
+      element.style.backgroundColor = this.typeToColor(this.type)
+
+      this.dropdown = !this.dropdown
+      
+      let svgElement = document.getElementsByClassName("popup-dropdown-svg")
+
+      if (!this.dropdown) {
+        svgElement[0].style.transform =  'rotate(0deg)';
+        return;
+      }
+      svgElement[0].style.transform = 'rotate(180deg)';
     }
   }
 }
