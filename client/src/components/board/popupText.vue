@@ -90,6 +90,9 @@ export default {
       this.$store.dispatch("board/togglePopupName")
       this.$store.commit("board/addItem", {"name": this.name, "type": this.type})
 
+      let element = document.getElementById("popup-dropdown-colorSelected")
+      element.style.backgroundColor = "#161618"
+
       setTimeout(() => { 
         let element = document.getElementById(this.$store.state.board.itemList.length - 1)
 
@@ -150,7 +153,6 @@ export default {
       this.type = type;
 
       let element = document.getElementById("popup-dropdown-colorSelected")
-      console.log(element)
       element.style.backgroundColor = this.typeToColor(this.type)
 
       this.dropdown = !this.dropdown
