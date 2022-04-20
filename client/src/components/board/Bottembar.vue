@@ -26,6 +26,15 @@ export default {
 	methods: {
     add() {
 		this.$store.dispatch("board/togglePopupName")
+		setTimeout(() => {
+			const element = document.getElementsByClassName("bottembar-addButton")
+			element[0].classList.add('click-annimation');
+			element[0].classList.add("click-annimation2")
+			setTimeout(() => {
+				element[0].classList.remove('click-annimation');
+				element[0].classList.remove("click-annimation2")
+			}, 900);
+		}, 150);
     },
   },
 }
