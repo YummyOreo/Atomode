@@ -3,15 +3,16 @@
 
     <ul>
       <li
-        v-for="(item, index) in $store.state.board.itemList" :key="index"
+        v-for="(item) in $store.state.board.itemList" :key="item.id"
         class="draggable select-none"
-        :id="index"
-        @mousedown="drag(index)"
-        @mousemove="draging(index)"
-        @mouseup="drop(index)"
-        @mouseout="drop(index)"
+        :id="item.id"
+        @mousedown="drag(item.id)"
+        @mousemove="draging(item.id)"
+        @mouseup="drop(item.id)"
+        @mouseout="drop(item.id)"
       >
       {{item.name}}
+      {{item.id}}
       </li>
     </ul>
   </div>

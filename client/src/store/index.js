@@ -3,7 +3,7 @@ import { createStore } from 'vuex'
 const board = {
   namespaced: true,
   state: {
-    itemList: [],
+    itemList: {},
     pickedUp: false,
     pickedUpId: null,
     popupNameToggle: false,
@@ -17,7 +17,9 @@ const board = {
       state.pickedUp = value
     },
     addItem(state, item) {
-      state.itemList.push(item)
+      item.id = Object.keys(state.itemList).length
+      console.log(Object.keys(state.itemList).length)
+      state.itemList[Object.keys(state.itemList).length] = item
     },
     setPickedUpId(state, id) {
       state.pickedUpId = id
@@ -26,8 +28,8 @@ const board = {
       state.popupNameToggle = value
     },
     deleteItem(state, id) {
-      state.itemList = state.itemList.splice(id,id);
-    },
+      state.itemList[id] = null
+    }
   }, actions: {
     togglePopupName({ commit, state }) {
       commit("setPopupNameToggle", !state.popupNameToggle)

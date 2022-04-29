@@ -5,7 +5,7 @@
 <script>
 
 export default {
-  name: 'Home',
+  name: 'Atomode | Home',
   components: {
       'navbar': require('@/components/Navbar.vue').default,
   },

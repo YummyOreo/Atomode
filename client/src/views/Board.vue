@@ -22,7 +22,7 @@ import { useHead } from '@vueuse/head'
 export default {
   setup() {
     useHead({
-      title: 'Andromeda | Board',
+      title: 'Atomode | Board',
     })
   },
   name: 'Drag',

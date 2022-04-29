@@ -94,7 +94,7 @@ export default {
       element.style.backgroundColor = "#161618"
 
       setTimeout(() => { 
-        let element = document.getElementById(this.$store.state.board.itemList.length - 1)
+        let element = document.getElementById(Object.keys(this.$store.state.board.itemList).length - 1)
 
         element.style.position = "absolute"
 

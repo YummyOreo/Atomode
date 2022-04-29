@@ -24,36 +24,3 @@
   transform: translate(25px, -5px);
 	position:absolute
 }
-
-.click-annimation {
-  animation-duration: 1s;
-  animation-name: pop1;
-
-}
-
-.click-annimation2 {
-  animation-duration: 1s;
-  animation-name: pop2;
-
-}
-
-@keyframes pop1 {
-  from {
-    transform: scale(1, 1);
-  }
-
-  to {
-    transform: scale(1.1, 1.1);
-  }
-}
-
-
-@keyframes pop2 {
-  from {
-    transform: scale(1.1, 1.1);
-  }
-
-  to {
-    transform: scale(1, 1);
-  }
-}
